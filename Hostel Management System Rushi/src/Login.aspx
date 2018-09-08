@@ -10,7 +10,9 @@
     Login Form
     <form id="form1" runat="server">
         <div>
-
+            <input type="text" name="uname" id="uname"/>
+            <input type="password" name="pword" id="pword" />
+            <asp:Button runat="server"  name="Login" id="Login" onclick="_Login" Text="Login"></asp:Button>
         </div>
     </form>
 </body>

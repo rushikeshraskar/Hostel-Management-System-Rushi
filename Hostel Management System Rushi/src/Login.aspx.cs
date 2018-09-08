@@ -9,6 +9,10 @@ public partial class src_Login : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-        int a = 1;
+        
+    }
+    protected void _Login(object sender, EventArgs e)
+    {
+        ScriptManager.RegisterClientScriptBlock(this,this.GetType(),"Alert Message", "alert('Login button is clicked')",true);
     }
 }
