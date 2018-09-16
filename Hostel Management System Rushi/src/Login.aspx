@@ -26,10 +26,10 @@
         <h1>Login Form</h1>
         <div>
             <div>
-                <input type="text" name="uname" id="uname" placeholder="Username"/>
+                <input type="text" name="uname" id="uname" placeholder="Username" required/>
               </div>
               <div>
-            <input type="password" name="pword" id="pword" placeholder="Password"/>
+            <input type="password" name="pword" id="pword" placeholder="Password" required/>
               </div>
             <div>
             <asp:button type="Submit" runat="server" onclick="SubmitForm"  name="Login" id="Login" text="Login" />
