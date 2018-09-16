@@ -11,27 +11,13 @@ public partial class src_Login : System.Web.UI.Page
     {
         
     }
-    protected Boolean Validate(String uname,String pword)
-    {
-        String msg = "";
-        if(uname.Equals(""))
-        {
-            msg += "Enter Username";
-        }
-        if (pword.Equals(""))
-        {
-            msg += " Enter Password";
-        }
-        ScriptManager.RegisterStartupScript(this, this.GetType(), "Show", "alert('" + msg + "');", true);
-        
-        return msg.Length==0;
-    }
-    protected void _Login(object sender, EventArgs e)
+     
+    protected void SubmitForm(object sender, EventArgs e)
     {
         String uname = String.Format("{0}",Request.Form["uname"]);
         String pword = String.Format("{0}", Request.Form["pword"]);
-        if (Validate(uname, pword))
-        {
+     
+     
            String connectionString= "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " + "D:\\workSpaces\\studio2017\\repos\\Hostel Management System Rushi\\Hostel Management System Rushi\\App_Data\\Database.mdf" + "; Integrated Security = True";
             System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(connectionString);
         con.Open();
@@ -49,8 +35,5 @@ public partial class src_Login : System.Web.UI.Page
             }
           con.Close();
             Console.WriteLine("connection closed successfully");
-            
-        
         }
-    }
 }

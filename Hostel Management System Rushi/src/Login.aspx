@@ -7,11 +7,22 @@
     <script src="bootstrap/bootstrap.js"></script>
     <link href="bootstrap/bootstrap.css" rel="stylesheet"/>
     <link href="css/css2.css" rel="stylesheet"/>
+    <script>
+        function validate(uname, pword) {
+            if (uname.length == 0 || pword.length == 0) {
+                alert("Enter Username and Password");
+                return false;
+            }
+            else {   
+                return true;
+            }
+                
+        }
+    </script>
     <title>Login Page</title>
 </head>
 <body>
-    
-    <form id="loginForm" runat="server">
+    <form id="loginForm" runat="server" onsubmit="return validate(uname.value,pword.value)">
         <h1>Login Form</h1>
         <div>
             <div>
@@ -21,7 +32,7 @@
             <input type="password" name="pword" id="pword" placeholder="Password"/>
               </div>
             <div>
-            <asp:Button runat="server"  name="Login" id="Login" onclick="_Login" Text="Login"></asp:Button>
+            <asp:button type="Submit" runat="server" onclick="SubmitForm"  name="Login" id="Login" text="Login" />
                 </div>
         </div>
     </form>
