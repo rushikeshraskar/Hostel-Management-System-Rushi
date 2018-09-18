@@ -16,8 +16,6 @@ public partial class src_Login : System.Web.UI.Page
     {
         String uname = String.Format("{0}",Request.Form["uname"]);
         String pword = String.Format("{0}", Request.Form["pword"]);
-     
-     
            String connectionString= "Data Source = (LocalDB)\\MSSQLLocalDB; AttachDbFilename = " + "D:\\workSpaces\\studio2017\\repos\\Hostel Management System Rushi\\Hostel Management System Rushi\\App_Data\\Database.mdf" + "; Integrated Security = True";
             System.Data.SqlClient.SqlConnection con = new System.Data.SqlClient.SqlConnection(connectionString);
         con.Open();
